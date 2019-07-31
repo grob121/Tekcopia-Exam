@@ -9,19 +9,24 @@
 import UIKit
 
 class AddOrderViewController: UIViewController {
+    
+    @IBOutlet weak var priceField: UITextField!
+    @IBOutlet weak var categoryIdField: UITextField!
+    @IBOutlet weak var quantityField: UITextField!
+    @IBOutlet weak var updatedAtField: UITextField!
+    @IBOutlet weak var createdAtField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func closeView(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        [priceField, categoryIdField, quantityField, updatedAtField, createdAtField].fieldsWithContent ? dismiss(animated: true, completion: nil) : showAlert(title: "Are you sure you want to exit?", message: "This will discard your changes.", actions: ["Cancel","OK"])
     }
     
     @IBAction func add(_ sender: Any) {
-        
+        [priceField, categoryIdField, quantityField, updatedAtField, createdAtField].fieldsEmpty ? showAlert(title: "Error", message: "Please complete the form to continue.", actions: ["OK"]) : showAlert(title: "", message: "You have successfully added your order.", actions: ["OK"])
     }
     
 }

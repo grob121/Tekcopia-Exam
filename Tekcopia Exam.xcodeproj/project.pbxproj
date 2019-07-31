@@ -16,6 +16,7 @@
 		F540D59122F1A54E00FA0617 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D59022F1A54E00FA0617 /* OrderListViewController.swift */; };
 		F540D59322F1A56300FA0617 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D59222F1A56300FA0617 /* CreateAccountViewController.swift */; };
 		F540D59522F1A57300FA0617 /* AddOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D59422F1A57300FA0617 /* AddOrderViewController.swift */; };
+		F540D59A22F1B2EB00FA0617 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F540D59922F1B2EB00FA0617 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F540D59022F1A54E00FA0617 /* OrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
 		F540D59222F1A56300FA0617 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		F540D59422F1A57300FA0617 /* AddOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewController.swift; sourceTree = "<group>"; };
+		F540D59922F1B2EB00FA0617 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				F540D58B22F193F200FA0617 /* View */,
 				F540D58A22F193E500FA0617 /* ViewController */,
+				F540D59622F1B26D00FA0617 /* Helper */,
 				F540D57822F14B9D00FA0617 /* AppDelegate.swift */,
 				F540D57F22F14B9E00FA0617 /* Assets.xcassets */,
 				F540D58122F14B9E00FA0617 /* LaunchScreen.storyboard */,
@@ -90,6 +93,14 @@
 				F540D58E22F1A44500FA0617 /* OrderTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F540D59622F1B26D00FA0617 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F540D59922F1B2EB00FA0617 /* Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 			files = (
 				F540D59322F1A56300FA0617 /* CreateAccountViewController.swift in Sources */,
 				F540D58F22F1A44500FA0617 /* OrderTableViewCell.swift in Sources */,
+				F540D59A22F1B2EB00FA0617 /* Extension.swift in Sources */,
 				F540D58D22F1951000FA0617 /* LoginViewController.swift in Sources */,
 				F540D57922F14B9D00FA0617 /* AppDelegate.swift in Sources */,
 				F540D59122F1A54E00FA0617 /* OrderListViewController.swift in Sources */,

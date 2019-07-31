@@ -141,6 +141,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="M9A-vx-KiL"/>
                     <connections>
+                        <outlet property="emailField" destination="51x-km-rW9" id="U4B-7n-B7n"/>
+                        <outlet property="passwordField" destination="p9C-4o-pJ3" id="lcp-PP-FOW"/>
                         <segue destination="9mb-tt-j4G" kind="presentation" identifier="showCreateAccountView" id="08Z-7V-7DY"/>
                         <segue destination="i2y-hv-R0t" kind="show" identifier="showOrderListView" id="H0u-xO-b5t"/>
                     </connections>
@@ -427,6 +429,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="avC-cc-7Fp"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryIdField" destination="5CY-Qe-gLh" id="e5m-bf-Uzl"/>
+                        <outlet property="createdAtField" destination="Lge-iP-1qF" id="jo7-LC-8Td"/>
+                        <outlet property="priceField" destination="osZ-ZQ-fEo" id="4wo-TY-fdh"/>
+                        <outlet property="quantityField" destination="hfN-xb-yJh" id="TwD-Pb-5zP"/>
+                        <outlet property="updatedAtField" destination="bjO-xs-n1f" id="nTE-tf-RVp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rhd-g2-Kky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -505,7 +514,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIt-pb-aeJ">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIt-pb-aeJ">
                                                 <rect key="frame" x="20" y="104" width="374" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -556,6 +565,12 @@
                         <viewLayoutGuide key="safeArea" id="o5T-1r-gcJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="cfC-Bu-akZ"/>
+                    <connections>
+                        <outlet property="confirmPasswordField" destination="6mf-yu-bJH" id="gqp-d9-g8U"/>
+                        <outlet property="emailField" destination="EFX-Gv-TSu" id="WVy-lb-ed3"/>
+                        <outlet property="nameField" destination="bIt-pb-aeJ" id="Mze-Aa-1T6"/>
+                        <outlet property="passwordField" destination="6Ms-n2-65O" id="xBZ-hr-G4Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33u-KK-J2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

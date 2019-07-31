@@ -10,13 +10,22 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        emailField.text = ""
+        passwordField.text = ""
+        view.endEditing(true)
+    }
+    
     @IBAction func login(_ sender: Any) {
-        performSegue(withIdentifier: "showOrderListView", sender: nil)
+        [emailField, passwordField].fieldsEmpty ? showAlert(title: "Error", message: "Please complete the form to continue.", actions: ["OK"]) : performSegue(withIdentifier: "showOrderListView", sender: nil)
     }
     
     @IBAction func signUp(_ sender: Any) {
