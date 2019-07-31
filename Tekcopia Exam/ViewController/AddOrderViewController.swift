@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AddOrderViewController.swift
 //  Tekcopia Exam
 //
 //  Created by Allan Pagdanganan on 31/07/2019.
@@ -8,13 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AddOrderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func closeView(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func add(_ sender: Any) {
+        
+    }
+    
 }
-
