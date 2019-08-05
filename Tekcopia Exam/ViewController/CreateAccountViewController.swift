@@ -15,9 +15,15 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
     
+    let requestHelper = RequestHelper()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        view.endEditing(true)
     }
 
     @IBAction func closeView(_ sender: Any) {
@@ -25,7 +31,33 @@ class CreateAccountViewController: UIViewController {
     }
     
     @IBAction func signUp(_ sender: Any) {
-        [nameField, emailField, passwordField, confirmPasswordField].fieldsEmpty ? showAlert(title: "Error", message: "Please complete the form to continue.", actions: ["OK"]) : dismiss(animated: true, completion: nil)
+        registerAccount()
+    }
+    
+    func registerAccount() {
+        let queries: [String: Any] = [
+            "name":"\(nameField.text!)",
+            "email":"\(emailField.text!)",
+            "password":"\(passwordField.text!)",
+            "c_password":"\(confirmPasswordField.text!)"
+        ]
+        
+        requestHelper.registerAccount(matching: queries) { (isRegister, registerStr)  in
+            DispatchQueue.main.async {
+                if isRegister == false {
+                    if let registerStr = registerStr {
+                        self.showAlert(title: "Error", message: registerStr, actions: ["OK"])
+                    } else {
+                        self.showAlert(title: "Error", message: "System error occured.", actions: ["OK"])
+                    }
+                } else {
+                    self.showAlert(title: "Registration Successful", message: "", actions: [])
+                    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+                        self?.dismiss(animated: true, completion: nil)
+                    }
+                }
+            }
+        }
     }
     
 }

@@ -13,7 +13,6 @@
         <!--Navigation Controller-->
         <scene sceneID="3gh-xO-0Fh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kim-eg-Txh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="bsX-t6-g2P" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t73-Hl-gIY">
                         <autoresizingMask key="autoresizingMask"/>
@@ -22,6 +21,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GOp-PD-IX8"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kim-eg-Txh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-696" y="21"/>
         </scene>
@@ -106,7 +106,7 @@
                                         <constraints>
                                             <constraint firstItem="p9C-4o-pJ3" firstAttribute="centerY" secondItem="ANR-lf-fJx" secondAttribute="centerY" constant="55" id="4Nr-pC-uNG"/>
                                             <constraint firstItem="OBi-at-e9X" firstAttribute="centerY" secondItem="ANR-lf-fJx" secondAttribute="centerY" constant="195" id="6fe-de-ygv"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="51x-km-rW9" secondAttribute="trailing" constant="30" id="BqD-zx-xDE"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="51x-km-rW9" secondAttribute="trailing" constant="30" id="BqD-zx-xDE"/>
                                             <constraint firstItem="51x-km-rW9" firstAttribute="trailing" secondItem="p9C-4o-pJ3" secondAttribute="trailing" id="G7m-nY-Axh"/>
                                             <constraint firstItem="OBi-at-e9X" firstAttribute="centerX" secondItem="ANR-lf-fJx" secondAttribute="centerX" id="JTA-Zo-KXH"/>
                                             <constraint firstAttribute="height" constant="550" id="Ldc-ua-PPN"/>
@@ -115,7 +115,6 @@
                                             <constraint firstItem="51x-km-rW9" firstAttribute="leading" secondItem="p9C-4o-pJ3" secondAttribute="leading" id="XoT-xf-9ff"/>
                                             <constraint firstItem="51x-km-rW9" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ANR-lf-fJx" secondAttribute="leading" constant="30" id="Zev-qd-95J"/>
                                             <constraint firstItem="UaR-Q6-vhB" firstAttribute="centerY" secondItem="ANR-lf-fJx" secondAttribute="centerY" constant="-115" id="dvh-gb-p2N"/>
-                                            <constraint firstItem="UaR-Q6-vhB" firstAttribute="centerX" secondItem="51x-km-rW9" secondAttribute="centerX" id="e5C-dc-lyA"/>
                                             <constraint firstItem="51x-km-rW9" firstAttribute="centerY" secondItem="ANR-lf-fJx" secondAttribute="centerY" constant="-5" id="hk0-2L-CFp"/>
                                             <constraint firstItem="zdy-RJ-5SX" firstAttribute="centerY" secondItem="ANR-lf-fJx" secondAttribute="centerY" constant="135" id="x58-gL-s7v"/>
                                         </constraints>
@@ -203,11 +202,11 @@
                                 <rect key="frame" x="0.0" y="162" width="414" height="700"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderTableViewCell" rowHeight="196" id="fus-Sj-zKk" customClass="OrderTableViewCell" customModule="Tekcopia_Exam" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="196"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderTableViewCell" rowHeight="197" id="fus-Sj-zKk" customClass="OrderTableViewCell" customModule="Tekcopia_Exam" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="197"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fus-Sj-zKk" id="Wd1-YT-vcL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="195.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="196.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9M-ha-tju">
@@ -255,6 +254,7 @@
                                                 <constraint firstItem="4Vp-ap-rkF" firstAttribute="leading" secondItem="DrM-q6-hMv" secondAttribute="leading" id="LKI-od-jrp"/>
                                                 <constraint firstItem="7Ib-nO-TUF" firstAttribute="trailing" secondItem="4Vp-ap-rkF" secondAttribute="trailing" id="Uld-lQ-tGB"/>
                                                 <constraint firstItem="4Vp-ap-rkF" firstAttribute="trailing" secondItem="DrM-q6-hMv" secondAttribute="trailing" id="WdK-PK-SJl"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="K9p-4D-SI5" secondAttribute="bottom" constant="5" id="iQh-GY-DXb"/>
                                                 <constraint firstItem="4Vp-ap-rkF" firstAttribute="top" secondItem="DrM-q6-hMv" secondAttribute="bottom" constant="15" id="w4B-MH-Rnk"/>
                                                 <constraint firstItem="I9M-ha-tju" firstAttribute="top" secondItem="Wd1-YT-vcL" secondAttribute="topMargin" constant="5" id="yc6-R8-uuF"/>
                                             </constraints>
@@ -262,12 +262,16 @@
                                         <connections>
                                             <outlet property="categoryIdLabel" destination="DrM-q6-hMv" id="ZNP-1e-Ikz"/>
                                             <outlet property="createdAtLabel" destination="7Ib-nO-TUF" id="2Fv-kg-gCa"/>
-                                            <outlet property="priceLabel" destination="DrM-q6-hMv" id="90l-vh-Dbo"/>
+                                            <outlet property="priceLabel" destination="I9M-ha-tju" id="LZG-2A-o4y"/>
                                             <outlet property="quantityLabel" destination="4Vp-ap-rkF" id="Ms6-i7-jqy"/>
                                             <outlet property="updatedAtLabel" destination="K9p-4D-SI5" id="Fz4-Hx-1nI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="i2y-hv-R0t" id="mb8-9g-sy6"/>
+                                    <outlet property="delegate" destination="i2y-hv-R0t" id="WqG-Me-yhv"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -289,6 +293,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XcF-6h-18u"/>
                     <connections>
+                        <outlet property="orderTableView" destination="mmW-18-3BU" id="ghR-Um-hoW"/>
                         <segue destination="XaY-ti-vdY" kind="presentation" identifier="showAddOrderView" id="FYq-Jp-Hpw"/>
                     </connections>
                 </viewController>

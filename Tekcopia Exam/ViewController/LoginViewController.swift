@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    let requestHelper = RequestHelper()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,11 +27,33 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: Any) {
-        [emailField, passwordField].fieldsEmpty ? showAlert(title: "Error", message: "Please complete the form to continue.", actions: ["OK"]) : performSegue(withIdentifier: "showOrderListView", sender: nil)
+        loginUser()
     }
     
     @IBAction func signUp(_ sender: Any) {
         performSegue(withIdentifier: "showCreateAccountView", sender: nil)
+    }
+    
+    func loginUser() {
+        let queries: [String: Any] = [
+            "email":"\(emailField.text!)",
+            "password":"\(passwordField.text!)"
+        ]
+        
+        requestHelper.loginUser(matching: queries) { (isLogin, loginStr)  in
+            DispatchQueue.main.async {
+                if isLogin == false {
+                    if let loginStr = loginStr {
+                        self.showAlert(title: "Error", message: loginStr, actions: ["OK"])
+                    } else {
+                        self.showAlert(title: "Error", message: "System error occured.", actions: ["OK"])
+                    }
+                } else {
+                    UserDefaults.standard.set(loginStr, forKey: "token")
+                    self.performSegue(withIdentifier: "showOrderListView", sender: nil)
+                }
+            }
+        }
     }
     
 }
